@@ -1,0 +1,48 @@
+import Modal from 'react-modal';
+
+Modal.setAppElement('#root')
+function App() {
+  const [ModalisOpen, setModalisOpen]=useState(false)
+
+<button onClick={()=>setModalisOpen(true)}></button>
+<Modal isOpen={ModalisOpen} shouldCloseOnOverlayClick={true}
+                             onRequestClose={setModalisOpen(false)}
+                             style={
+                                 {
+                                 Overlay: {
+                                     backgroundColor:'grey'
+                                 },
+                                 content :{
+                                     color:'orange'
+                                 }
+                             }
+                            }
+                             >
+                                 <h2>Modal title</h2>
+                                 <p>Modal Body</p>
+
+                             </Modal>
+////////////////////////////////////////////////////////////////
+const [openModal, setopenModal]=useState(false);
+  const showModal = (id) =>{
+      setopenModal(true);
+      console.log(id);
+  };
+
+  const hideModal=()=>{
+      setopenModal(false);
+  }
+  <button onClick={()=>showModal(props.id)} >
+<Modalm showModal={openModal} hideModal={hideModal}>
+                  <div className="modalHeader">
+                   <h2>titre1</h2>
+                  </div>
+                  <div className="bodyModal">
+                  <h2>titre1</h2>
+                  </div>
+                  <div classNmae="footerModal">
+                      <button className="modalBtn">Fermer</button>
+                  </div>
+
+
+                    </Modalm>                             
